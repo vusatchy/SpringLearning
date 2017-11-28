@@ -1,5 +1,6 @@
-package menu;
+package menu.commands;
 
+import menu.Command;
 import org.springframework.beans.factory.annotation.Autowired;
 import services.UserService;
 

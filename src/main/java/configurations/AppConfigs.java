@@ -1,14 +1,18 @@
 package configurations;
 
 
-import menu.Command;
-import menu.ConsoleMenu;
-import menu.GetAllUsersCommand;
-import menu.Switcher;
+import menu.*;
+import menu.commands.GetAllEventsBetweenCommand;
+import menu.commands.GetAllEventsCommand;
+import menu.commands.GetAllUsersCommand;
+import menu.commands.GetUserByNameCommand;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import services.*;
 import services.App;
+import services.strategy.BirthdayDiscountStrategy;
+import services.strategy.DiscountStrategy;
+import services.strategy.TenTicketsDiscountStrategy;
 
 @Configuration
 public class AppConfigs {
@@ -56,4 +60,13 @@ public class AppConfigs {
 
     @Bean
     public Command getAllUsersCommand(){return new GetAllUsersCommand();}
+
+    @Bean
+    public Command getAllUserByNameCommand(){return  new GetUserByNameCommand();}
+
+    @Bean
+    public Command getAllEventsCommand() {return  new GetAllEventsCommand();}
+
+    @Bean
+    public Command getAllEventsBetweenCommand() {return  new GetAllEventsBetweenCommand();}
 }

@@ -19,8 +19,12 @@ public class ConsoleMenu {
     }
 
     private void init() {
-       // switcher.addComand(new GetAllUsersCommand());
+       // switcher.addComand(new GetUserByNameCommand());
         options.add("0.Print all users");
+        options.add("1.Get user by name command");
+        options.add("2.Get all events");
+        options.add("3.Get all events between");
+        options.add("4.Get all events next to");
     }
 
     public void makeChoice(Integer number) {

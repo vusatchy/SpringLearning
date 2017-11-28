@@ -6,6 +6,7 @@ import models.Ticket;
 import models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import services.strategy.DiscountStrategy;
 
 import java.time.LocalDateTime;
 import java.util.List;

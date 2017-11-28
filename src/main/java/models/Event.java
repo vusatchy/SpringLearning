@@ -151,4 +151,16 @@ public class Event {
         return true;
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Event{");
+        sb.append("id=").append(id);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", airDates=").append(airDates);
+        sb.append(", basePrice=").append(basePrice);
+        sb.append(", rating=").append(rating);
+        sb.append(", auditoriums=").append(auditoriums);
+        sb.append('}');
+        return sb.toString();
+    }
 }

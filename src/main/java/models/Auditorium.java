@@ -82,4 +82,14 @@ public class Auditorium {
     public boolean isVip(Long x) {
         return vipSeats.contains(x);
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Auditorium{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", numberOfSeats=").append(numberOfSeats);
+        sb.append(", vipSeats=").append(vipSeats);
+        sb.append('}');
+        return sb.toString();
+    }
 }

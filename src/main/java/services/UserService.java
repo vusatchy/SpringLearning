@@ -24,11 +24,11 @@ public class UserService {
     }
 
     public Set<User> getByFirstName(String name) {
-        return users.stream().filter(x -> x.getFirstName().equals(name)).collect(Collectors.toSet());
+        return users.stream().filter(x -> x.getFirstName().matches(name)).collect(Collectors.toSet());
     }
 
     public User getUserByEmail(String mail) {
-        return users.stream().filter(x -> x.getEmail().equals(mail)).findFirst().get();
+        return users.stream().filter(x -> x.getEmail().matches(mail)).findFirst().get();
     }
 
     public User getUserById(int id){
